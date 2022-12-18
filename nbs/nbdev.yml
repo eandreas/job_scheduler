@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "job_scheduler"
+  site-url: "https://eandreas.github.io/job_scheduler"
+  description: "A job scheduler written in python for systems where crontab is not available"
+  repo-branch: main
+  repo-url: "https://github.com/eandreas/job_scheduler"
