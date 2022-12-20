@@ -1,0 +1,70 @@
+#!/bin/bash
+
+datetime_file='datetime.previous'
+delta='2s'
+job_file='config'
+
+while true; do
+
+    date +"%Y %m %e %H %M" > $datetime_file
+    sleep $delta
+
+    year_=`cat $datetime_file | awk '{print $1}'`
+    month_=`cat $datetime_file | awk '{print $2}'`
+    day_=`cat $datetime_file | awk '{print $3}'`
+    hour_=`cat $datetime_file | awk '{print $4}'`
+    minute_=`cat $datetime_file | awk '{print $5}'`
+
+    datetime=`date +"%Y %m %e %H %M"`
+
+    year=`echo $datetime | awk '{print $1}'`
+    month=`echo $datetime | awk '{print $2}'`
+    day=`echo $datetime | awk '{print $3}'`
+    hour=`echo $datetime | awk '{print $4}'`
+    minute=`echo $datetime | awk '{print $5}'`
+
+    year_changed=false
+    month_changed=false
+    day_changed=false
+    hour_changed=false
+    minute_changed=false
+
+    if [[ ( $year_ != $year ) ]] ; then
+        year_changed=true
+    fi
+    if [[ ( $month_ != $month ) ]] ; then
+        month_changed=true
+    fi
+    if [[ ( $day_ != $day ) ]] ; then
+        day_changed=true
+    fi
+    if [[ ( $hour_ != $hour ) ]] ; then
+        hour_changed=true
+    fi
+    if [[ ( $minute_ != $minute ) ]] ; then
+        minute_changed=true
+    fi
+
+    job_year=`awk '{print $1}' $job_file`
+    awk '{print $1}' $job_file
+    job_month=`awk '{print $2}' $job_file`
+    job_day=`awk '{print $3}' $job_file`
+    job_hour=`awk '{print $4}' $job_file`
+    job_minute=`awk '{print $5}' $job_file`
+    job_command=`awk '{$1=$2=$3=$4=$5=""; print $0}' $job_file`
+    unset $1
+    unset $2
+    unset $3
+    unset $4
+    unset $5
+
+    echo "awk '{print $5}' $job_file"
+
+    echo $job_year
+    echo $job_month
+    echo $job_day
+    echo $job_hour
+    echo $job_minute
+    echo $job_command
+
+done

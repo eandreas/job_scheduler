@@ -5,4 +5,8 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://eandreas.github.io',
                 'git_url': 'https://github.com/eandreas/job_scheduler',
                 'lib_path': 'job_scheduler'},
-  'syms': {'job_scheduler.core': {'job_scheduler.core.foo': ('core.html#foo', 'job_scheduler/core.py')}}}
+  'syms': { 'job_scheduler.core': { 'job_scheduler.core.BackupRotation': ('core.html#backuprotation', 'job_scheduler/core.py'),
+                                    'job_scheduler.core.BackupRotation.__init__': ( 'core.html#backuprotation.__init__',
+                                                                                    'job_scheduler/core.py'),
+                                    'job_scheduler.core.KeepLastN': ('core.html#keeplastn', 'job_scheduler/core.py'),
+                                    'job_scheduler.core.KeepLastN.__init__': ('core.html#keeplastn.__init__', 'job_scheduler/core.py')}}}
