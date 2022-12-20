@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A job scheduler in python",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "A job scheduler in python",
+    "section": "Install",
+    "text": "Install\npip install job_scheduler"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "A job scheduler in python",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "BackupRotation",
+    "section": "",
+    "text": "source\n\nKeepLastN\n\n KeepLastN (n, keepList)\n\n\nsource\n\n\nBackupRotation\n\n BackupRotation (targetBakupDir, keepLastNDays, keepLastNWeeks,\n                 keepLastNMonths, keepLastNYears)\n\n\n# keep last 3 weeks\nn = 3\n# but only Saturdays and Sundays: 0 = Monday, 1 = Tuesday, ..., 6 = Sunday\nkeepList = [5, 6]\n\nklnm = KeepLastN(n, keepList)\n\n\nbr = BackupRotation('bla', klnm, klnm, klnm, klnm)"
+  }
+]
