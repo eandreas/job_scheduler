@@ -8,7 +8,7 @@ class KeepLastN():
     '''
     
     '''
-    def __init__(n, keepList):
+    def __init__(self, n, keepList):
         self.n = n
         self.keepList = keepList
 
